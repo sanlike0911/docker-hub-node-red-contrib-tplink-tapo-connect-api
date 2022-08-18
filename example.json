@@ -1,0 +1,1304 @@
+[
+    {
+        "id": "01ccda01ada3740d",
+        "type": "group",
+        "z": "2af8d72bf72b23e2",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "9688311d857cbbd4",
+            "13d4a967f251539e",
+            "d93c8ed65cee8445",
+            "41d054e7f0db6c7d"
+        ],
+        "x": 34,
+        "y": 19,
+        "w": 652,
+        "h": 142
+    },
+    {
+        "id": "9688311d857cbbd4",
+        "type": "debug",
+        "z": "2af8d72bf72b23e2",
+        "g": "01ccda01ada3740d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "13d4a967f251539e",
+        "type": "inject",
+        "z": "2af8d72bf72b23e2",
+        "g": "01ccda01ada3740d",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 120,
+        "wires": [
+            [
+                "41d054e7f0db6c7d"
+            ]
+        ]
+    },
+    {
+        "id": "d93c8ed65cee8445",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "01ccda01ada3740d",
+        "name": "[node-turn-off]",
+        "info": "",
+        "x": 130,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "41d054e7f0db6c7d",
+        "type": "tplink_turn_off",
+        "z": "2af8d72bf72b23e2",
+        "g": "01ccda01ada3740d",
+        "name": "",
+        "deviceIp": "",
+        "deviceAlias": "",
+        "deviceIpRange": "",
+        "searchMode": "ip",
+        "x": 380,
+        "y": 120,
+        "wires": [
+            [
+                "9688311d857cbbd4"
+            ]
+        ]
+    },
+    {
+        "id": "06b6360f81296af7",
+        "type": "group",
+        "z": "2af8d72bf72b23e2",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "2ee76b9b2c3cc22d",
+            "c76158138c91c20f",
+            "99d557cc9c7c0fe5",
+            "6e0f6bd8b59f15b8",
+            "1d16de9bc2fc9db5"
+        ],
+        "x": 34,
+        "y": 379,
+        "w": 652,
+        "h": 202
+    },
+    {
+        "id": "2ee76b9b2c3cc22d",
+        "type": "inject",
+        "z": "2af8d72bf72b23e2",
+        "g": "06b6360f81296af7",
+        "name": "100",
+        "props": [
+            {
+                "p": "payload.brightness",
+                "v": "100",
+                "vt": "num"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 540,
+        "wires": [
+            [
+                "1d16de9bc2fc9db5"
+            ]
+        ]
+    },
+    {
+        "id": "c76158138c91c20f",
+        "type": "debug",
+        "z": "2af8d72bf72b23e2",
+        "g": "06b6360f81296af7",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "99d557cc9c7c0fe5",
+        "type": "inject",
+        "z": "2af8d72bf72b23e2",
+        "g": "06b6360f81296af7",
+        "name": "0",
+        "props": [
+            {
+                "p": "payload.brightness",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 480,
+        "wires": [
+            [
+                "1d16de9bc2fc9db5"
+            ]
+        ]
+    },
+    {
+        "id": "6e0f6bd8b59f15b8",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "06b6360f81296af7",
+        "name": "[node-brightness]",
+        "info": "",
+        "x": 140,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "1d16de9bc2fc9db5",
+        "type": "tplink_brightness",
+        "z": "2af8d72bf72b23e2",
+        "g": "06b6360f81296af7",
+        "name": "",
+        "deviceIp": "",
+        "deviceAlias": "",
+        "deviceIpRange": "",
+        "searchMode": "ip",
+        "brightness": "80",
+        "x": 390,
+        "y": 480,
+        "wires": [
+            [
+                "c76158138c91c20f"
+            ]
+        ]
+    },
+    {
+        "id": "086d3450b3d9dbd2",
+        "type": "group",
+        "z": "2af8d72bf72b23e2",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "3404f36bd650ed10",
+            "cdab8da9d33add5e",
+            "94b3d0d0d8874cd5",
+            "d2be7d3d82d57bab"
+        ],
+        "x": 714,
+        "y": 199,
+        "w": 632,
+        "h": 142
+    },
+    {
+        "id": "3404f36bd650ed10",
+        "type": "debug",
+        "z": "2af8d72bf72b23e2",
+        "g": "086d3450b3d9dbd2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "cdab8da9d33add5e",
+        "type": "inject",
+        "z": "2af8d72bf72b23e2",
+        "g": "086d3450b3d9dbd2",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 850,
+        "y": 300,
+        "wires": [
+            [
+                "d2be7d3d82d57bab"
+            ]
+        ]
+    },
+    {
+        "id": "94b3d0d0d8874cd5",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "086d3450b3d9dbd2",
+        "name": "[node-status]",
+        "info": "",
+        "x": 810,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "d2be7d3d82d57bab",
+        "type": "tplink_status",
+        "z": "2af8d72bf72b23e2",
+        "g": "086d3450b3d9dbd2",
+        "name": "",
+        "deviceIp": "",
+        "deviceAlias": "",
+        "deviceIpRange": "",
+        "searchMode": "ip",
+        "x": 1030,
+        "y": 300,
+        "wires": [
+            [
+                "3404f36bd650ed10"
+            ]
+        ]
+    },
+    {
+        "id": "4a73621dbd59ed57",
+        "type": "group",
+        "z": "2af8d72bf72b23e2",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "2705cf801d2ce67f",
+            "652a90197f7e9fa8",
+            "0d09174cf7cb7b57",
+            "540ce7bb94fbee5b",
+            "8a3bb671c9d1af16",
+            "62493963889dc648",
+            "b5424b08cd6f0b05",
+            "68ac8d3c198d8364",
+            "3f8eab24d64abe2a",
+            "28a412c037bbab85",
+            "d14bd2a50a0e9e13",
+            "4731fb8d1424c9ab",
+            "57aae3e37c7efdc8",
+            "9615b09994d298e1",
+            "7f00d365e09bff33"
+        ],
+        "x": 34,
+        "y": 619,
+        "w": 652,
+        "h": 422
+    },
+    {
+        "id": "2705cf801d2ce67f",
+        "type": "inject",
+        "z": "2af8d72bf72b23e2",
+        "g": "4a73621dbd59ed57",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 170,
+        "y": 840,
+        "wires": [
+            [
+                "d14bd2a50a0e9e13"
+            ]
+        ]
+    },
+    {
+        "id": "652a90197f7e9fa8",
+        "type": "debug",
+        "z": "2af8d72bf72b23e2",
+        "g": "4a73621dbd59ed57",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "0d09174cf7cb7b57",
+        "type": "inject",
+        "z": "2af8d72bf72b23e2",
+        "g": "4a73621dbd59ed57",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 170,
+        "y": 760,
+        "wires": [
+            [
+                "28a412c037bbab85"
+            ]
+        ]
+    },
+    {
+        "id": "540ce7bb94fbee5b",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "4a73621dbd59ed57",
+        "name": "tapo device infomation",
+        "info": "",
+        "x": 160,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "8a3bb671c9d1af16",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "4a73621dbd59ed57",
+        "name": "power on",
+        "info": "",
+        "x": 140,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "62493963889dc648",
+        "type": "inject",
+        "z": "2af8d72bf72b23e2",
+        "g": "4a73621dbd59ed57",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 170,
+        "y": 1000,
+        "wires": [
+            [
+                "4731fb8d1424c9ab"
+            ]
+        ]
+    },
+    {
+        "id": "b5424b08cd6f0b05",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "4a73621dbd59ed57",
+        "name": "power off",
+        "info": "",
+        "x": 140,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "68ac8d3c198d8364",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "4a73621dbd59ed57",
+        "name": "[node-command]",
+        "info": "",
+        "x": 140,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "3f8eab24d64abe2a",
+        "type": "tplink_command",
+        "z": "2af8d72bf72b23e2",
+        "g": "4a73621dbd59ed57",
+        "name": "",
+        "deviceIp": "",
+        "deviceAlias": "",
+        "deviceIpRange": "",
+        "searchMode": "ip",
+        "x": 560,
+        "y": 760,
+        "wires": [
+            [
+                "652a90197f7e9fa8"
+            ]
+        ]
+    },
+    {
+        "id": "28a412c037bbab85",
+        "type": "template",
+        "z": "2af8d72bf72b23e2",
+        "g": "4a73621dbd59ed57",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "plain",
+        "template": "{\n    \"email\": \"your@gmail.com\",\n    \"password\": \"password\",\n    \"deviceIp\": \"192.168.0.122\",\n    \"searchMode\": \"ip\",\n    \"command\": \"power\",\n    \"option\": {\n        \"power\": 1\n    }\n}",
+        "output": "json",
+        "x": 340,
+        "y": 760,
+        "wires": [
+            [
+                "3f8eab24d64abe2a"
+            ]
+        ]
+    },
+    {
+        "id": "d14bd2a50a0e9e13",
+        "type": "template",
+        "z": "2af8d72bf72b23e2",
+        "g": "4a73621dbd59ed57",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "plain",
+        "template": "{\n    \"email\": \"your@gmail.com\",\n    \"password\": \"foo\",\n    \"deviceAlias\": \"bar\",\n    \"deviceIpRange\": \"192.168.0.0/24\",\n    \"searchMode\": \"alias\",\n    \"command\": \"power\",\n    \"option\": {\n        \"power\": 0\n    }\n}",
+        "output": "json",
+        "x": 340,
+        "y": 840,
+        "wires": [
+            [
+                "3f8eab24d64abe2a"
+            ]
+        ]
+    },
+    {
+        "id": "4731fb8d1424c9ab",
+        "type": "template",
+        "z": "2af8d72bf72b23e2",
+        "g": "4a73621dbd59ed57",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "plain",
+        "template": "{\n    \"command\": \"status\"\n}",
+        "output": "json",
+        "x": 340,
+        "y": 1000,
+        "wires": [
+            [
+                "3f8eab24d64abe2a"
+            ]
+        ]
+    },
+    {
+        "id": "57aae3e37c7efdc8",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "4a73621dbd59ed57",
+        "name": "power on/off(toggle)",
+        "info": "",
+        "x": 170,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "9615b09994d298e1",
+        "type": "inject",
+        "z": "2af8d72bf72b23e2",
+        "g": "4a73621dbd59ed57",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 170,
+        "y": 920,
+        "wires": [
+            [
+                "7f00d365e09bff33"
+            ]
+        ]
+    },
+    {
+        "id": "7f00d365e09bff33",
+        "type": "template",
+        "z": "2af8d72bf72b23e2",
+        "g": "4a73621dbd59ed57",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "json",
+        "syntax": "plain",
+        "template": "{\n    \"command\": \"toggle\"\n}",
+        "output": "json",
+        "x": 340,
+        "y": 920,
+        "wires": [
+            [
+                "3f8eab24d64abe2a"
+            ]
+        ]
+    },
+    {
+        "id": "7b2634e685c20aa0",
+        "type": "group",
+        "z": "2af8d72bf72b23e2",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "f5a5e8026b113f41",
+            "72771d09395e2f3c",
+            "a20995f2e443db2c",
+            "1295d338c03939ee"
+        ],
+        "x": 34,
+        "y": 199,
+        "w": 652,
+        "h": 142
+    },
+    {
+        "id": "f5a5e8026b113f41",
+        "type": "debug",
+        "z": "2af8d72bf72b23e2",
+        "g": "7b2634e685c20aa0",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "72771d09395e2f3c",
+        "type": "inject",
+        "z": "2af8d72bf72b23e2",
+        "g": "7b2634e685c20aa0",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 300,
+        "wires": [
+            [
+                "1295d338c03939ee"
+            ]
+        ]
+    },
+    {
+        "id": "a20995f2e443db2c",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "7b2634e685c20aa0",
+        "name": "[node-toggle]",
+        "info": "",
+        "x": 130,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1295d338c03939ee",
+        "type": "tplink_toggle",
+        "z": "2af8d72bf72b23e2",
+        "g": "7b2634e685c20aa0",
+        "name": "",
+        "deviceIp": "",
+        "deviceAlias": "",
+        "deviceIpRange": "",
+        "searchMode": "ip",
+        "x": 370,
+        "y": 300,
+        "wires": [
+            [
+                "f5a5e8026b113f41"
+            ]
+        ]
+    },
+    {
+        "id": "b56635b3f132805e",
+        "type": "group",
+        "z": "2af8d72bf72b23e2",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "2251f4edf4b86c68",
+            "7b688ce95edf4463",
+            "81b35f69d9d6d69d",
+            "f4a4dfc5fd2ffaff",
+            "0d28b02fa5bccdd6"
+        ],
+        "x": 714,
+        "y": 379,
+        "w": 632,
+        "h": 202
+    },
+    {
+        "id": "2251f4edf4b86c68",
+        "type": "inject",
+        "z": "2af8d72bf72b23e2",
+        "g": "b56635b3f132805e",
+        "name": "#cccccc",
+        "props": [
+            {
+                "p": "payload.colour",
+                "v": "#cccccc",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 850,
+        "y": 540,
+        "wires": [
+            [
+                "0d28b02fa5bccdd6"
+            ]
+        ]
+    },
+    {
+        "id": "7b688ce95edf4463",
+        "type": "debug",
+        "z": "2af8d72bf72b23e2",
+        "g": "b56635b3f132805e",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "81b35f69d9d6d69d",
+        "type": "inject",
+        "z": "2af8d72bf72b23e2",
+        "g": "b56635b3f132805e",
+        "name": "white",
+        "props": [
+            {
+                "p": "payload.colour",
+                "v": "white",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 850,
+        "y": 480,
+        "wires": [
+            [
+                "0d28b02fa5bccdd6"
+            ]
+        ]
+    },
+    {
+        "id": "f4a4dfc5fd2ffaff",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "b56635b3f132805e",
+        "name": "[node-colour]",
+        "info": "",
+        "x": 810,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "0d28b02fa5bccdd6",
+        "type": "tplink_colour",
+        "z": "2af8d72bf72b23e2",
+        "g": "b56635b3f132805e",
+        "name": "",
+        "deviceIp": "",
+        "deviceAlias": "",
+        "deviceIpRange": "",
+        "colour": "#000000",
+        "searchMode": "ip",
+        "x": 1030,
+        "y": 480,
+        "wires": [
+            [
+                "7b688ce95edf4463"
+            ]
+        ]
+    },
+    {
+        "id": "b5e3d925d80b36ad",
+        "type": "group",
+        "z": "2af8d72bf72b23e2",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "99ae15c19de418c2",
+            "75f168baf26da658",
+            "bdc2782d2d25d384"
+        ],
+        "x": 34,
+        "y": 1079,
+        "w": 1318,
+        "h": 468
+    },
+    {
+        "id": "99ae15c19de418c2",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "b5e3d925d80b36ad",
+        "name": "This \"node module: tplink_tapo_connect_api\" has been left for compatibility, this module may be deleted without notice.",
+        "info": "",
+        "x": 460,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "75f168baf26da658",
+        "type": "group",
+        "z": "2af8d72bf72b23e2",
+        "g": "b5e3d925d80b36ad",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "96d43c484be8f811",
+            "13e9c5af0a37283e",
+            "35d376d0d4289905",
+            "a9fda406072de153",
+            "24eba61d74a61c56"
+        ],
+        "x": 734,
+        "y": 1159,
+        "w": 592,
+        "h": 182
+    },
+    {
+        "id": "96d43c484be8f811",
+        "type": "inject",
+        "z": "2af8d72bf72b23e2",
+        "g": "75f168baf26da658",
+        "name": "toggle",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 870,
+        "y": 1300,
+        "wires": [
+            [
+                "13e9c5af0a37283e"
+            ]
+        ]
+    },
+    {
+        "id": "13e9c5af0a37283e",
+        "type": "tplink_tapo_connect_api",
+        "z": "2af8d72bf72b23e2",
+        "g": "75f168baf26da658",
+        "name": "",
+        "deviceIp": "",
+        "deviceAlias": "",
+        "deviceIpRange": "",
+        "mode": "toggle",
+        "x": 1030,
+        "y": 1300,
+        "wires": [
+            [
+                "35d376d0d4289905"
+            ]
+        ]
+    },
+    {
+        "id": "35d376d0d4289905",
+        "type": "debug",
+        "z": "2af8d72bf72b23e2",
+        "g": "75f168baf26da658",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "a9fda406072de153",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "75f168baf26da658",
+        "name": "toggle( \"on => off\" or \"off => on\" )",
+        "info": "",
+        "x": 910,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "24eba61d74a61c56",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "75f168baf26da658",
+        "name": "[old] node-tapo-connect: toggle",
+        "info": "",
+        "x": 890,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "bdc2782d2d25d384",
+        "type": "group",
+        "z": "2af8d72bf72b23e2",
+        "g": "b5e3d925d80b36ad",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "fb493813.249f08",
+            "8311f395.25e56",
+            "2aa38c09.564724",
+            "9158e6ef.dd5d78",
+            "79f7a84a.4c4d88",
+            "27568da0.cc1852",
+            "3338a0f2585b9662",
+            "f5ca83ef74c5c137",
+            "b25960c8c58ef24c",
+            "61a4a5ca77c19e36"
+        ],
+        "x": 74,
+        "y": 1159,
+        "w": 632,
+        "h": 362
+    },
+    {
+        "id": "fb493813.249f08",
+        "type": "tplink_tapo_connect_api",
+        "z": "2af8d72bf72b23e2",
+        "g": "bdc2782d2d25d384",
+        "name": "",
+        "deviceIp": "",
+        "deviceAlias": "",
+        "deviceIpRange": "",
+        "mode": "command",
+        "x": 410,
+        "y": 1300,
+        "wires": [
+            [
+                "2aa38c09.564724"
+            ]
+        ]
+    },
+    {
+        "id": "8311f395.25e56",
+        "type": "inject",
+        "z": "2af8d72bf72b23e2",
+        "g": "bdc2782d2d25d384",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 210,
+        "y": 1380,
+        "wires": [
+            [
+                "fb493813.249f08"
+            ]
+        ]
+    },
+    {
+        "id": "2aa38c09.564724",
+        "type": "debug",
+        "z": "2af8d72bf72b23e2",
+        "g": "bdc2782d2d25d384",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 590,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "9158e6ef.dd5d78",
+        "type": "inject",
+        "z": "2af8d72bf72b23e2",
+        "g": "bdc2782d2d25d384",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "str",
+        "x": 210,
+        "y": 1300,
+        "wires": [
+            [
+                "fb493813.249f08"
+            ]
+        ]
+    },
+    {
+        "id": "79f7a84a.4c4d88",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "bdc2782d2d25d384",
+        "name": "tapo device infomation",
+        "info": "",
+        "x": 220,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "27568da0.cc1852",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "bdc2782d2d25d384",
+        "name": "power off",
+        "info": "",
+        "x": 180,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "3338a0f2585b9662",
+        "type": "inject",
+        "z": "2af8d72bf72b23e2",
+        "g": "bdc2782d2d25d384",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "255",
+        "payloadType": "num",
+        "x": 210,
+        "y": 1480,
+        "wires": [
+            [
+                "fb493813.249f08"
+            ]
+        ]
+    },
+    {
+        "id": "f5ca83ef74c5c137",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "bdc2782d2d25d384",
+        "name": "power on",
+        "info": "",
+        "x": 180,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "b25960c8c58ef24c",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "bdc2782d2d25d384",
+        "name": "[old]tapo connect module: toggle",
+        "info": "",
+        "x": 490,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "61a4a5ca77c19e36",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "bdc2782d2d25d384",
+        "name": "[old] node-tapo-connect: command",
+        "info": "",
+        "x": 240,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "d9911e3830e586ee",
+        "type": "group",
+        "z": "2af8d72bf72b23e2",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "dff10f578aa5b66c",
+            "a78a0795cccf664d",
+            "ab92ef78b8813a7a",
+            "2aa4613a0d8d09a9"
+        ],
+        "x": 714,
+        "y": 19,
+        "w": 632,
+        "h": 142
+    },
+    {
+        "id": "dff10f578aa5b66c",
+        "type": "debug",
+        "z": "2af8d72bf72b23e2",
+        "g": "d9911e3830e586ee",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "a78a0795cccf664d",
+        "type": "inject",
+        "z": "2af8d72bf72b23e2",
+        "g": "d9911e3830e586ee",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 850,
+        "y": 120,
+        "wires": [
+            [
+                "2aa4613a0d8d09a9"
+            ]
+        ]
+    },
+    {
+        "id": "ab92ef78b8813a7a",
+        "type": "comment",
+        "z": "2af8d72bf72b23e2",
+        "g": "d9911e3830e586ee",
+        "name": "[node-turn-on]",
+        "info": "",
+        "x": 810,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2aa4613a0d8d09a9",
+        "type": "tplink_turn_on",
+        "z": "2af8d72bf72b23e2",
+        "g": "d9911e3830e586ee",
+        "name": "",
+        "deviceIp": "",
+        "deviceAlias": "",
+        "deviceIpRange": "",
+        "searchMode": "ip",
+        "x": 1040,
+        "y": 120,
+        "wires": [
+            [
+                "dff10f578aa5b66c"
+            ]
+        ]
+    }
+]
